@@ -1,0 +1,133 @@
+/* --- Global Dark Futuristic Theme --- */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+    background: radial-gradient(circle at top left, #0f0f0f, #000);
+    color: #e5e5e5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- App Container --- */
+.app-container {
+    background: rgba(25, 25, 25, 0.7);
+    border-radius: 25px;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(0, 255, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.app-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9),
+                0 0 25px rgba(0, 255, 255, 0.25);
+}
+
+/* --- Header --- */
+header h1 {
+    font-size: 3em;
+    font-weight: 800;
+    margin-top: 15%;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00f0ff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header p {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+/* --- Canvas Styling --- */
+#sketch-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+    transition: transform 0.3s ease;
+}
+#sketch-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.5);
+}
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* --- AI Loading Animation --- */
+#status {
+    font-size: 1.1em;
+    color: #0ff;
+    margin-top: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* --- Futuristic Footer --- */
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+    color: #777;
+    letter-spacing: 0.5px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    header h1 { font-size: 2em; }
+    .app-container { padding: 25px; }
+}
+/* --- CTA Button --- */
+.cta-btn {
+  background: linear-gradient(90deg, #00f0ff, #00ff88);
+  color: #000;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
+}
+
+.cta-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.6);
+}
+#sketch-container {
+    width: 100%;
+    max-width: 100%; /* Full width */
+    margin: 0 auto 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+}
+
+canvas, video {
+    display: block;
+    width: 100% !important;  /* Full responsive */
+    height: auto !important;
+}
+
